@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="justify-content: center;
+    display: grid;
+    grid-template-columns: auto;">
+
+    <p>Số hạng 1: <input type="input" id="inp1"
+        onchange="update_value()"
+        placeholder="0"
+        value="0"> </p>
+    <br>
+
+    <p>Số hạng 2:
+        <input type="input" id="inp2"
+        onchange="update_value()"
+        placeholder="0"
+        value="0"> 
+    </p> 
+
+    <p id="p1">Tổng là: </p>
+        <script type="text/javascript">
+            function update_value(){
+                const tmp_inp1 = document.getElementById("inp1").value;
+                sh1=parseInt(tmp_inp1);
+                //lấy số thứ 1
+                const tmp_inp2 = document.getElementById("inp2").value;
+                sh2=parseInt(tmp_inp2);
+                //kết quả
+                const kq1=document.getElementById("p1")
+            if(isNaN(parseInt(tmp_inp1)) ||isNaN(parseInt(tmp_inp1))) //lấy số thứ 1
+                {
+                alert("Vui lòng nhập một số");
+                }else{
+                   kq1.innerHTML="Tổng là:"+(sh1+sh2);
+            }}
+    </script>
+    <form style="width: 250px;
+    margin-top: 30px;
+    background-color: rgb(129, 222, 47);
+    padding:10px 10px 0 10px;
+    border-radius: 8px;">
+    <label>Danh sách sinh viên:</label>
+    <br>
+    <select id="drop1" onclick="get_selection()"
+        style="width: 150px; margin-top: 20px; height: 30px;">
+            <option id ="p1">Nguyễn Ngốc Trạng</option>
+            <option>Trần Minh Tưởng</option>
+            <option>Nguyễn Thị Thành</option>
+            <option>Lê Trung Vinh</option>
+            <option>Nguyễn Huỳnh Như Ý</option>
+            <option>Trương Giả Thuận</option>
+    </select>
+    <p id="p3" style="color: blue;">Xin chào</p> 
+    </form>
+    <script type="text/javascript">
+        function get_selection() {
+            x = document.getElementById("drop1").options;
+            console.log(x);
+            switch(x.selectedIndex){
+            case 0:
+                document.getElementById("p3").innerHTML = "Xin chào " +
+                x[x.selectedIndex].innerHTML + 
+                ". Chúc một ngày tốt lành!.";
+            case 1: <p> abccc</p>;
+            }}
+        </script>
+        
+</body>
+</html>
